@@ -67,11 +67,11 @@ describe('Tech Test', () => {
 		const { totalPrice } = cart.total();
 		const { items } = cart.itemsList();
 		const unlimited1GBCount = items.filter(a => a.item === 'Unlimited 1GB').length;
-		const unlimited5GBCount = items.filter(a => a.item === 'Unlimited 2GB').length;
-		const dataPackCount = items.filter(a => a.item === 'Unlimited 2GB').length;
+		const unlimited2GBCount = items.filter(a => a.item === 'Unlimited 2GB').length;
+		const dataPackCount = items.filter(a => a.item === '1 GB Data-pack').length;
 		
 		expect(unlimited1GBCount).toBe(1);
-		expect(unlimited5GBCount).toBe(2);
+		expect(unlimited2GBCount).toBe(2);
 		expect(dataPackCount).toBe(2)
 		expect(totalPrice).toBe("84.70");
 	})
